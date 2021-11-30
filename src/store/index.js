@@ -5,9 +5,19 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    count : 0
+    orderList: []
   },
   mutations: {
+    setOrderList(state, payload) {
+      state.orderList.push(payload)
+    },
+    deleteOrder(state, payload) {
+      let index = state.orderList.findIndex(v => v.id == payload.id)
+      state.orderList.splice(index, 1)
+    },
+    resetOrder(state) {
+      state.orderList = []
+    }
   },
   actions: {
   },
