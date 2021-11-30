@@ -1,8 +1,14 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+ <v-app>
+   <img src="./assets/logo.png">
     <router-view/>
-  </div>
+    <v-btn
+      depressed
+      color="primary"
+    >
+      Primary
+    </v-btn>
+ </v-app>
 </template>
 
 <script>
